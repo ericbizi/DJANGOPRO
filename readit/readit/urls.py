@@ -18,13 +18,13 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.urls import path
-from books.views import list_books
 from django.conf.urls import url, include
+from books import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url('^$', list_books, name='books'),
-]
+    path('', include('books.urls')),
+    ]
 
 if settings.DEBUG:
     import debug_toolbar

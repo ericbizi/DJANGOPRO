@@ -5,7 +5,7 @@ from . models import Book, Author
 class BookAdmin(admin.ModelAdmin):
 	fieldsets= [
      ("Book Details",{'fields':['title','authors']}),
-     ("Review",{'fields':['is_favourite','date_reviewed']}),
+     ("Review",{'fields':['review','is_favourite','date_reviewed']}),
 	]
      # Make the field uneditable
 	#readonly_fields=  ('date_reviewed',)
@@ -19,7 +19,8 @@ class BookAdmin(admin.ModelAdmin):
 	list_filter = ('is_favourite','title',)
 	search_fields = ('title','authors__name',)
 
-	list_display = ('title','book_authors','date_reviewed','is_favourite',)
+	list_display = ('title','book_authors',
+						'date_reviewed','is_favourite',)
 
 
 # Register your models here.

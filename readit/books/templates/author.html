@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+	{% block content %}
+
+		<h2>{{ author.name }}</h2>
+
+			 {% for book in author.books.all %} 
+	    		{% if book.review %}
+	    			<div class='book'>
+	    				<h3><a href="{% url 'book-detail' book.pk %}"> {{ book.title }}</h3></a>
+	    				{% if book.is_favourite %} <p class='highlight'>favourite</p> {% endif %}
+	    				<p> {{ book.review|linebreaks }}</p>
+                        
+	    			</div>
+	    			{% endif %}
+	    	{% endfor %}
+	    	
+	    </div>
+	{% endblock %}
