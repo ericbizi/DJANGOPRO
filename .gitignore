@@ -1,0 +1,23 @@
+   #unit test
+   .tox
+  .coverage
+   .cache
+  nosetests.xml
+  coverage.xml
+ /htmlcov/
+ 
+ #Translation
+  .mr.developer
+  .project
+  .pydevproject
+  
+  #Rope
+ .ropeproject
+  
+  #Django stuff
+  *.log
+ *.pot
+  *.pyc
+ *.sqlite3
+
+
