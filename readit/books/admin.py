@@ -7,8 +7,8 @@ class BookAdmin(admin.ModelAdmin):
      ("Book Details",{'fields':['title','authors']}),
      ("Review",{'fields':['is_favourite','date_reviewed']}),
 	]
-
-	readonly_fields=  ('date_reviewed',)
+     # Make the field uneditable
+	#readonly_fields=  ('date_reviewed',)
 
 	def book_authors(self,obj):
 		return obj.list_authors()

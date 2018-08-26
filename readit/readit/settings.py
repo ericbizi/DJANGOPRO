@@ -25,7 +25,7 @@ SECRET_KEY = '$3-sn)t9bm)*9%oy=ib_=$)y%q1%u=r8#rzn1^8@7tea!8#_(a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','localhost']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
+    'django.contrib.humanize',
     'books',
 ]
 
@@ -121,3 +122,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+INTERNAL_IPS= ['127.0.0.1']
